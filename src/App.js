@@ -29,7 +29,12 @@ const App = () => {
     false
   );
 
+  const [apikey, setApikey] = useState(
+    ''
+  );
+
   const handleInput = event => setInput(event.target.value);
+  const handleApikey = event => setApikey(event.target.value);
 
   const handleButton = () => {
     setOutput('holdon');
@@ -44,7 +49,7 @@ const App = () => {
         headers: {
           "content-type": "application/json",
           "x-rapidapi-host": "gpt-text-generation.p.rapidapi.com",
-          "x-rapidapi-key": ""
+          "x-rapidapi-key": apikey
         },
         body: JSON.stringify({
           prompt: input,
@@ -74,7 +79,8 @@ const App = () => {
           <InputWindow onChangeInput={handleInput}></InputWindow>
         </Grid>
         <Grid item xs={3}>
-          <p>Some text about the application</p>
+          <p>Insert api key</p>
+          <input onChange={(e) => {handleApikey(e)}}></input>
         </Grid>
         <Grid item xs={9}>
           <GenerateTextButton onButtonPress={handleButton} loading={loading}></GenerateTextButton>
