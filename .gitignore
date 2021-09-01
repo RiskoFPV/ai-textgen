@@ -5,6 +5,7 @@
 
 package-lock.json
 yarn.lock
+build/
 # Node artifact files
 node_modules/
 dist/
