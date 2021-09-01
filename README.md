@@ -1,7 +1,7 @@
 # AI Text Generation UI React Demo
 
-add api key to App.js - "x-rapidapi-key" header
+1. clone repo and run "npm install"
 
-start with 'npm start' and browse to localhost:3000
+2. start with 'npm start' and browse to localhost:3000
 
-
+3. paste api key into input box on the right side. Email me for api access.
